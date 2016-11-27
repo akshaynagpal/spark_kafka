@@ -13,5 +13,5 @@
     `bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test`
  4. Run the producer and then type a few messages into the console to send to the server.    
     `bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test`
- 5. Start spark to consume messages. Copy spark-streaming-kafka-0-8-assembly_2.11-2.0.2.jar and kafka_wordcount.py to *usr/local/spark/bin/* and then  run from usr/local/spark/bin/     
-    `./spark-submit --jars **spark-streaming-kafka-0-8-assembly_2.11-2.0.2.jar** **kafka_wordcount.py** localhost:2181 test`
+ 5. Start spark to consume messages. Copy **spark-streaming-kafka-0-8-assembly_2.11-2.0.2.jar** and **kafka_wordcount.py** to *usr/local/spark/bin/* and then  run from *usr/local/spark/bin/*     
+    `./spark-submit --jars spark-streaming-kafka-0-8-assembly_2.11-2.0.2.jar kafka_wordcount.py localhost:2181 test`
